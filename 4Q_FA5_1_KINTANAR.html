@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FA 5: PART 1</title>
+</head>
+<body>
+    <script>
+        var a = 0;
+        var b = 0;
+        var c = 0;
+        var output;
+
+
+        var num = prompt("Please enter a number: ");
+
+        while (num%1 !== 0 || num === "")
+        {
+            num = prompt("Please enter a number");
+        }
+
+        parseInt(num);
+
+        document.write("Number inputted: " + num + "<br>" + "<br>" );
+
+        a = num;
+        while (a >= 1)
+            {   
+                if (num %2 === 0)
+                {
+                    while (b < a) {
+                        document.write(a + " ");
+                        b++;
+                    }
+
+                } else {
+
+                    while (b < num) {
+                        document.write(a + " ");
+                        b++;
+                    }
+
+                }
+
+                document.write ("<br>");
+                b = 0;
+                a--;
+            } 
+    </script>
+</body>
+</html>

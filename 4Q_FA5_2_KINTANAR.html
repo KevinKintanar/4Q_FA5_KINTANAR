@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FA 5: PART 2 </title>
+</head>
+<body>
+    <script>
+        var length = 0;
+        const list = [];
+       
+
+        function add() {
+            var length = list.length + 1;
+
+            var Input = document.getElementById("Input").value;
+
+            if (Input !== "") {
+                list.push(Input);
+                document.getElementById('list').innerHTML = list.join(" ");
+
+                if (length == 7) {
+
+                    list.shift();
+
+                }
+            }
+        }
+
+        function remove() {
+            var length = list.length;
+
+            document.getElementById('list').innerHTML = list.join(" ");
+
+            if (length > 0) 
+            {
+                list.pop();
+            }
+        }
+    </script>
+
+<input type="text" id="Input">
+
+<button onclick="add()"> Add </button>
+
+<button onclick="remove()"> Remove </button>
+
+<div id="list"></div>
+</body>
+</html>
